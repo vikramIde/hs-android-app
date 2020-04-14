@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
             "map": [
                 {
                     "source": "/Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/1223ac715635f24c2423df086c70155c/core-1.1.0/res/values-v16/values-v16.xml",

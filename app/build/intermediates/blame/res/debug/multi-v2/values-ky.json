@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
+            "outputFile": "/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ky/values-ky.xml",
             "map": [
                 {
                     "source": "/Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/f9d5a1613ed31e0bf6c36cd121053d5a/appcompat-1.1.0/res/values-ky/values-ky.xml",

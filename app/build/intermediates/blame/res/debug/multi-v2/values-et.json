@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml",
+            "outputFile": "/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-et/values-et.xml",
             "map": [
                 {
                     "source": "/Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/5817b2958488d747ed554b11dbd3371b/jetified-play-services-base-17.0.0/res/values-et/values.xml",

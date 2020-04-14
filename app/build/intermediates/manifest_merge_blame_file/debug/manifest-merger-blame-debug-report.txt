@@ -21,13 +21,13 @@
 21
 22    <uses-sdk
 23        android:minSdkVersion="24"
-23-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml
+23-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml
 24        android:targetSdkVersion="29" />
-24-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml
+24-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml
 25
 26    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
-26-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:23:5-74
-26-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:23:22-71
+26-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:23:5-74
+26-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:23:22-71
 27    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- Include required permissions for Google Maps API to run. -->
 27-->[androidx.biometric:biometric:1.0.0] /Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/f7d54461ba0de2a8cfab35c5e2068a09/biometric-1.0.0/AndroidManifest.xml:24:5-72
 27-->[androidx.biometric:biometric:1.0.0] /Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/f7d54461ba0de2a8cfab35c5e2068a09/biometric-1.0.0/AndroidManifest.xml:24:22-69
@@ -46,52 +46,52 @@
 33-->[com.google.android.gms:play-services-maps:17.0.0] /Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/7fe16a3803236f337c403c7cb4379bd4/jetified-play-services-maps-17.0.0/AndroidManifest.xml:28:9-32
 34
 35    <application
-35-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:25:5-48:19
+35-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:25:5-48:19
 36        android:allowBackup="true"
-36-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:26:9-35
+36-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:26:9-35
 37        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 37-->[androidx.core:core:1.1.0] /Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/1223ac715635f24c2423df086c70155c/core-1.1.0/AndroidManifest.xml:24:18-86
 38        android:debuggable="true"
 39        android:extractNativeLibs="false"
 40        android:icon="@mipmap/ic_launcher"
-40-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:27:9-43
+40-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:27:9-43
 41        android:label="@string/application_name"
-41-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:28:9-49
+41-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:28:9-49
 42        android:supportsRtl="true"
-42-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:29:9-35
+42-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:29:9-35
 43        android:testOnly="true"
 44        android:theme="@style/Theme.AppCompat.Light" >
-44-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:30:9-53
+44-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:30:9-53
 45        <activity
-45-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:33:9-41:20
+45-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:33:9-41:20
 46            android:name="com.example.android.biometricauth.MainActivity"
-46-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:34:13-74
+46-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:34:13-74
 47            android:label="@string/application_name"
-47-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:35:13-53
+47-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:35:13-53
 48            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-48-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:36:13-69
+48-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:36:13-69
 49            <intent-filter>
-49-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:37:13-40:29
+49-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:37:13-40:29
 50                <action android:name="android.intent.action.MAIN" />
-50-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:38:17-69
-50-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:38:25-66
+50-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:38:17-69
+50-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:38:25-66
 51
 52                <category android:name="android.intent.category.LAUNCHER" />
-52-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:39:17-77
-52-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:39:27-74
+52-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:39:17-77
+52-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:39:27-74
 53            </intent-filter>
 54        </activity>
 55        <activity
-55-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:43:9-46:90
+55-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:43:9-46:90
 56            android:name="com.example.android.biometricauth.SettingsActivity"
-56-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:44:13-78
+56-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:44:13-78
 57            android:label="@string/action_settings"
-57-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:45:13-52
+57-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:45:13-52
 58            android:parentActivityName="com.example.android.biometricauth.MainActivity" />
-58-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:46:13-88
+58-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:46:13-88
 59        <activity android:name="com.example.android.biometricauth.WelcomeActivity" />
-59-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:47:9-53
-59-->/Users/vikrambhushan/AndroidStudioProjects/security-samples/BiometricAuthentication/app/src/main/AndroidManifest.xml:47:19-50
+59-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:47:9-53
+59-->/Users/vikrambhushan/AndroidStudioProjects/hs-android-app/app/src/main/AndroidManifest.xml:47:19-50
 60        <activity
 60-->[androidx.biometric:biometric:1.0.0] /Users/vikrambhushan/.gradle/caches/transforms-2/files-2.1/f7d54461ba0de2a8cfab35c5e2068a09/biometric-1.0.0/AndroidManifest.xml:28:9-31:67
 61            android:name="androidx.biometric.DeviceCredentialHandlerActivity"
