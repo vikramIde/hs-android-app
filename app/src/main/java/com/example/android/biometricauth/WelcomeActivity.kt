@@ -61,17 +61,5 @@ class WelcomeActivity : AppCompatActivity() {
          }
      }
 
-    /**
-     *
-     * Read From SHaredPrefrence on an Ecrypted file
-     */
 
-    private fun readPrefrence (key : String): String? {
-
-        val defaultValue = ""
-        val sharedPref = this.getPreferences(Context.MODE_PRIVATE)
-        val value = sharedPref.getString(key, defaultValue)
-        return  value
-
-    }
 }
