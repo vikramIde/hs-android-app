@@ -66,11 +66,13 @@ class WelcomeActivity : AppCompatActivity() {
     private fun initializeViews() {
         val button = findViewById<Button>(R.id.decrypt_button)
         button.setOnClickListener {
-            showBiometricPrompt()
+            showBiometricPrompt1()
         }
     }
 
-    private fun showBiometricPrompt() {
+    private fun showBiometricPrompt1() {
+        val myPreference = HsPreference(this)
+
         val biometricPromptUtils = BiometricPromptUtils(this, object : BiometricPromptUtils.BiometricListener {
             override fun onAuthenticationLockoutError() {
                 // implement your lockout error UI prompt
@@ -82,6 +84,8 @@ class WelcomeActivity : AppCompatActivity() {
 
             override fun onAuthenticationSuccess() {
                 // implement your authentication success UI prompt
+                val Message = myPreference.getEncrypted()
+
             }
 
             override fun onAuthenticationFailed() {
