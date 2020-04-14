@@ -796,6 +796,7 @@ id custom
 id customPanel
 id dark
 id decor_content_parent
+id decrypt_button
 id decrypted_message
 id default_activity_button
 id description
@@ -999,6 +1000,7 @@ string accessibility_fingerprint_dialog_help_area
 string action_settings
 string application_name
 string cancel
+string cancelKey
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
@@ -1017,6 +1019,8 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string confirmDescription
+string confirmYourBiometricsKey
 string confirm_device_credential_password
 string default_error_msg
 string description_bugdroid_icon

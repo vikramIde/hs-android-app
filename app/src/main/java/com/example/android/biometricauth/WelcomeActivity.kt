@@ -46,6 +46,7 @@ import javax.crypto.SecretKey
 class WelcomeActivity : AppCompatActivity() {
 
      override fun onCreate(savedInstanceState: Bundle?) {
+
          super.onCreate(savedInstanceState)
          val myPreference = HsPreference(this)
 
@@ -59,7 +60,43 @@ class WelcomeActivity : AppCompatActivity() {
          findViewById<TextView>(R.id.decrypted_message).run {
              text = Decrypted
          }
+
+         initializeViews()
      }
+    private fun initializeViews() {
+        val button = findViewById<Button>(R.id.decrypt_button)
+        button.setOnClickListener {
+            showBiometricPrompt()
+        }
+    }
 
+    private fun showBiometricPrompt() {
+        val biometricPromptUtils = BiometricPromptUtils(this, object : BiometricPromptUtils.BiometricListener {
+            override fun onAuthenticationLockoutError() {
+                // implement your lockout error UI prompt
+            }
 
+            override fun onAuthenticationPermanentLockoutError() {
+                // implement your permanent lockout error UI prompt
+            }
+
+            override fun onAuthenticationSuccess() {
+                // implement your authentication success UI prompt
+            }
+
+            override fun onAuthenticationFailed() {
+                // implement your authentication failed UI prompt
+            }
+
+            override fun onAuthenticationError() {
+                // implement your authentication error UI prompt
+            }
+
+        })
+        biometricPromptUtils.showBiometricPrompt(
+                resources.getString(R.string.confirmDescription),
+                resources.getString(R.string.cancelKey),
+                confirmationRequired = true
+        )
+    }
 }

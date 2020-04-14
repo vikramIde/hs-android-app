@@ -41,7 +41,6 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/application_name"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.AppCompat.Light" >
         <activity
             android:name="com.example.android.biometricauth.MainActivity"
