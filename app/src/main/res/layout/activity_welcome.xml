@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/decrypted_message"
+        android:layout_width="253dp"
+        android:layout_height="72dp"
+        android:fontFamily="cursive"
+        android:text="Decrypted"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/encrypted_message"
+        android:layout_width="253dp"
+        android:layout_height="72dp"
+        android:fontFamily="cursive"
+        android:text="Encrypted"
+        android:textSize="24sp" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
