@@ -93,6 +93,7 @@
             android:textColor="?android:attr/textColorPrimaryInverse"
             tools:text="Create Wallet" />
 
+
 <!--        <Button style="@android:style/Widget.Material.Button.Colored"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->

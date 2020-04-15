@@ -43,7 +43,7 @@ import javax.crypto.NoSuchPaddingException
 import javax.crypto.SecretKey
 
 
-class WelcomeActivity : AppCompatActivity(), CryptoUtils {
+class WelcomeActivity : AppCompatActivity() {
      private val cryptoUtilsObj: CryptoUtils = CryptoUtils(ANDROID_KEY_STORE)
      override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -64,11 +64,11 @@ class WelcomeActivity : AppCompatActivity(), CryptoUtils {
          cryptoUtilsObj.setupKeyStoreAndKeyGenerator()
          val (defaultCipher: Cipher, cipherNotInvalidated: Cipher) = cryptoUtilsObj.setupCiphers()
          
-         initializeViews(defaultCipher, cipherNotInvalidated)
+         initializeViews(cipherNotInvalidated, defaultCipher)
      }
     private fun initializeViews(cipherNotInvalidated: Cipher, defaultCipher: Cipher) {
         val button = findViewById<Button>(R.id.decrypt_button)
-        cryptoUtilsObj.createKey(DEFAULT_KEY_NAME)
+        cryptoUtilsObj.createKey(DEFAULT_KEY_NAME, false)
         button.setOnClickListener {
             showBiometricPrompt(defaultCipher,DEFAULT_KEY_NAME)
         }
@@ -81,7 +81,7 @@ class WelcomeActivity : AppCompatActivity(), CryptoUtils {
     ) {
         val myPreference = HsPreference(this)
 
-        if (cryptoUtilsObj.initCipher(cipher, keyName)){
+        //if (cryptoUtilsObj.initCipher(cipher, keyName)){
             val biometricPromptUtils = BiometricPromptUtils(this, object : BiometricPromptUtils.BiometricListener {
                 override fun onAuthenticationLockoutError() {
                     // implement your lockout error UI prompt
@@ -95,12 +95,11 @@ class WelcomeActivity : AppCompatActivity(), CryptoUtils {
                     // implement your authentication success UI prompt
                     // val Message = myPreference.getEncrypted()
                     val message_to_entrypt = "Hello World"
-                    val encrypted_message = cryptoUtilsObj.tryEncrypt(message_to_entrypt, cipher);
+                    val (encrypted_message, ivBytes)= cryptoUtilsObj.tryEncrypt(message_to_entrypt, cipher);
 
-                    val encryptedText = Base64.encodeToString(encrypted_message, 0 /* flags */)
 
                     findViewById<TextView>(R.id.encrypted_message).run {
-                        text = encryptedText
+                        text = encrypted_message.toString()
                     }
                     findViewById<TextView>(R.id.decrypted_message).run {
                         text = message_to_entrypt
@@ -123,7 +122,7 @@ class WelcomeActivity : AppCompatActivity(), CryptoUtils {
                     resources.getString(R.string.cancelKey),
                     confirmationRequired = true
             )
-        }
+       //}
 
         
     }
