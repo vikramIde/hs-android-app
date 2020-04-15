@@ -797,12 +797,12 @@ id customPanel
 id dark
 id decor_content_parent
 id decrypt_button
-id decrypted_message
 id default_activity_button
 id description
 id dialog_button
 id disableHome
 id edit_query
+id encrypt_button
 id encrypted_message
 id end
 id expand_activities_button
@@ -905,6 +905,7 @@ id uniform
 id up
 id useLogo
 id use_fingerprint_in_future_check
+id user_text_input
 id wide
 id withText
 id wrap_content

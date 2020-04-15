@@ -9,8 +9,8 @@ class HsPreference (context: Context) {
 
     val preference = context.getSharedPreferences(PREFERENCE_NAME, Context.MODE_PRIVATE)
 
-    fun getEncrypted() : String? {
-        return preference.getString(PREFERENCE_ENCRYPTED,"")
+    fun getEncrypted() : String {
+        return preference.getString(PREFERENCE_ENCRYPTED,"").toString()
 
     }
 

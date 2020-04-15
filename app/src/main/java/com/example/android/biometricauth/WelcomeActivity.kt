@@ -18,7 +18,9 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +28,7 @@ import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import java.io.IOException
+import java.nio.charset.Charset
 import java.security.InvalidAlgorithmParameterException
 import java.security.InvalidKeyException
 import java.security.KeyStore
@@ -57,9 +60,9 @@ class WelcomeActivity : AppCompatActivity() {
          findViewById<TextView>(R.id.encrypted_message).run {
              text = Message
          }
-         findViewById<TextView>(R.id.decrypted_message).run {
-             text = Decrypted
-         }
+//         findViewById<TextView>(R.id.decrypted_message).run {
+//             text = Decrypted
+//         }
 
          cryptoUtilsObj.setupKeyStoreAndKeyGenerator()
          val (defaultCipher: Cipher, cipherNotInvalidated: Cipher) = cryptoUtilsObj.setupCiphers()
@@ -70,14 +73,15 @@ class WelcomeActivity : AppCompatActivity() {
         val button = findViewById<Button>(R.id.decrypt_button)
         cryptoUtilsObj.createKey(DEFAULT_KEY_NAME, false)
         button.setOnClickListener {
-            showBiometricPrompt(defaultCipher,DEFAULT_KEY_NAME)
+            showBiometricPrompt(defaultCipher,DEFAULT_KEY_NAME,"decrypt")
         }
     }
 
 
     private fun showBiometricPrompt(
         cipher: Cipher,
-        keyName: String
+        keyName: String,
+        buttonType: String
     ) {
         val myPreference = HsPreference(this)
 
@@ -93,19 +97,27 @@ class WelcomeActivity : AppCompatActivity() {
     
                 override fun onAuthenticationSuccess() {
                     // implement your authentication success UI prompt
-                    // val Message = myPreference.getEncrypted()
-                    val message_to_entrypt = "Hello World"
-                    val (encrypted_message, ivBytes)= cryptoUtilsObj.tryEncrypt(message_to_entrypt, cipher);
+                    var message_to_entrypt = "Hello World"
+                    if(buttonType==="encrypt")
+                    {
+                        val editText = findViewById<EditText>(R.id.user_text_input)
+                        message_to_entrypt = editText.text.toString()
+                        val (encrypted_message, ivBytes) = cryptoUtilsObj.tryEncrypt(message_to_entrypt, cipher)
+                        myPreference.setEncrypted(encrypted_message.toString())
 
+                        findViewById<TextView>(R.id.encrypted_message).run {
+                            text = encrypted_message.toString()
+                        }
 
-                    findViewById<TextView>(R.id.encrypted_message).run {
-                        text = encrypted_message.toString()
+                    } else if(buttonType==="decrypt") {
+                        val Message =  Base64.decode(myPreference.getEncrypted().toByteArray(),1)
+
+                        val decryptedMessage = cryptoUtilsObj.tryDecrypt(Message, cipher);
+
+                        findViewById<TextView>(R.id.encrypted_message).run {
+                            text = decryptedMessage.toString()
+                        }
                     }
-                    findViewById<TextView>(R.id.decrypted_message).run {
-                        text = message_to_entrypt
-                    }
-
-    
                 }
     
                 override fun onAuthenticationFailed() {

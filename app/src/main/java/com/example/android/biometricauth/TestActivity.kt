@@ -25,13 +25,19 @@ class TestActivity : AppCompatActivity() {
         */
 
         val (defaultCipher: Cipher, cipherNotInvalidated: Cipher) = cryptoUtilsObj.init()
+        val myPreference = HsPreference(this)
 
         val message_to_entrypt = "Hello World"
         Log.i("Actual message", message_to_entrypt)
         val (encrypted_message_byte : ByteArray, ivBytes: ByteArray) = cryptoUtilsObj.tryEncrypt(message_to_entrypt, defaultCipher);
         val encrypted_message  = Base64.encodeToString(encrypted_message_byte, 0)
+
+        myPreference.setEncrypted(encrypted_message)
         Log.i("Encrypted Message", encrypted_message)
-        val decryptedBack = cryptoUtilsObj.tryDecrypt(encrypted_message_byte, defaultCipher);
+
+        val Message =  Base64.decode(myPreference.getEncrypted().toByteArray(),1)
+
+        val decryptedBack = cryptoUtilsObj.tryDecrypt(Message, defaultCipher);
         Log.i("Decrypted Message", decryptedBack)
 
     }
