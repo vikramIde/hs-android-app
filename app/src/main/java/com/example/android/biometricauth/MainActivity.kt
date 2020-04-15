@@ -82,6 +82,7 @@ class MainActivity : AppCompatActivity(),
 
         biometricPrompt = createBiometricPrompt()
         setUpPurchaseButtons(cipherNotInvalidated, defaultCipher)
+        Log.e("MainActivity", "onCreate ")
 
     }
 
@@ -92,11 +93,13 @@ class MainActivity : AppCompatActivity(),
      * @param defaultCipher the default cipher, used for the purchase button
      */
     private fun setUpPurchaseButtons(cipherNotInvalidated: Cipher, defaultCipher: Cipher) {
+        Log.e("setUpPurchaseButtons", "Before setUpPurchaseButtons ")
+
         val purchaseButton = findViewById<Button>(R.id.purchase_button)
         if (BiometricManager.from(
                         application).canAuthenticate() == BiometricManager.BIOMETRIC_SUCCESS) {
             createKey(DEFAULT_KEY_NAME)
-
+            Log.e("setUpPurchaseButtons", "After setUpPurchaseButtons ")
             purchaseButton.run {
                 isEnabled = true
                 setOnClickListener(PurchaseButtonClickListener(defaultCipher, DEFAULT_KEY_NAME))
